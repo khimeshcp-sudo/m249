@@ -1,0 +1,65 @@
+version: "3.9"
+services:
+  web:
+    image: nginx:alpine
+    ports:
+      - "8087:80"
+    volumes:
+      - .:/var/www/html
+      - ./docker-config/nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - php
+  php:
+    build: .
+    volumes:
+      - .:/var/www/html
+      - ./docker-config/php/conf.d/memory.ini:/usr/local/etc/php/conf.d/memory.ini
+    depends_on:
+      - db
+      - opensearch
+      - redis
+  db:
+    image: mysql:8.0
+    ports:
+      - "3386:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: server
+      MYSQL_DATABASE: magento248
+      MYSQL_USER: magento
+      MYSQL_PASSWORD: magento
+    command: --log-bin-trust-function-creators=1
+    volumes:
+      - dbdata:/var/lib/mysql
+  redis:
+    image: redis:7
+    ports:
+      - "6387:6379"
+  opensearch:
+    image: opensearchproject/opensearch:2.11.0
+    environment:
+      - discovery.type=single-node
+      - plugins.security.disabled=true
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9287:9200"
+    volumes:
+      - osdata:/usr/share/opensearch/data
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - "8090:8080"
+    depends_on:
+      - db
+  composer:
+    image: composer:2
+    volumes:
+      - .:/app          # mount mage249/ itself instead of ./src
+      - ~/.composer:/tmp
+    working_dir: /app
+    entrypoint: ["composer"]
+    profiles:
+      - tools
+volumes:
+  dbdata:
+  osdata:
