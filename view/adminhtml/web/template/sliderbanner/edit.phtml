@@ -1,0 +1,17 @@
+<?php
+
+/* @var $this \Magento\Framework\View\Element\Template */
+
+?>
+
+<!-- Slider Banner Edit Template -->
+
+<div>
+    <h2>Edit Slider Banner</h2>
+    <form action="<?= $this->getUrl('sliderbanner/edit') ?>">
+        <input type="hidden" name="id" value="<?= $this->getId() ?>">
+        <label>Slider Banner Name:</label>
+        <input type="text" name="name" value="<?= $this->getName() ?>">
+        <button type="submit">Save</button>
+    </form>
+</div>

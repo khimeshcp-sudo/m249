@@ -1,0 +1,18 @@
+<?php
+
+/* @var $this \Magento\Framework\View\Element\Template */
+
+?>
+
+<!-- Slider Banner List Template -->
+
+<div>
+    <h2>Slider Banners</h2>
+    <ul>
+        <?php foreach ($this->getSliderBanners() as $sliderBanner) : ?>
+            <li>
+                <?= $sliderBanner->getName() ?>
+            </li>
+        <?php endforeach; ?>
+    </ul>
+</div>
