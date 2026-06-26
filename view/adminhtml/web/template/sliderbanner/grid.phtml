@@ -1,0 +1,25 @@
+<?php
+
+/* @var $this \Magento\Framework\View\Element\Template */
+
+?>
+
+<!-- Slider Banner Grid Template -->
+
+<div>
+    <h2>Slider Banners Grid</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Slider Banner Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($this->getSliderBanners() as $sliderBanner) : ?>
+                <tr>
+                    <td><?= $sliderBanner->getName() ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
