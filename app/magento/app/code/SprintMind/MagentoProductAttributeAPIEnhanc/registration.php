@@ -1,0 +1,3 @@
+<?php /** * Auto-generated for: Magento Product Attribute API Enhancement */
+use Magento\Framework\Component\ComponentRegistrar;
+ComponentRegistrar::register(Co…
