@@ -1,0 +1,15 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+<form action="<?= $block->getAction() ?>" method="post">
+    <div class="field">
+        <label for="contact-type" class="label"><span><?php echo __('Contact Type') ?></span></label>
+        <select id="contact-type" name="contact_type">
+            <option value="sales"><?php echo __('Sales') ?></option>
+            <option value="support"><?php echo __('Support') ?></option>
+            <option value="billing"><?php echo __('Billing') ?></option>
+            <option value="general"><?php echo __('General') ?></option>
+        </select>
+    </div>
+    <!-- Other form fields -->
+</form>
