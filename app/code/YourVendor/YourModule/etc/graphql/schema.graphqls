@@ -1,0 +1,8 @@
+type Mutation {
+    customerLogin(email: String!, password: String!): LoginResponse!
+}
+
+type LoginResponse {
+    message: String!
+    customerId: Int
+}
