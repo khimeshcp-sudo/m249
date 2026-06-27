@@ -1,0 +1,18 @@
+<div class="product-item">
+    <?php if ($_product->isVisibleInSiteVisibility()): ?>
+        <a href="<?php echo $block->escapeHtml($_product->getProductUrl()); ?>" class="product-item-link">
+            <img src="<?php echo $block->escapeHtml($_product->getImageUrl()); ?>" alt="<?php echo $block->escapeHtml($_product->getName()); ?>" />
+            <h2 class="product-item-name"><?php echo $block->escapeHtml($_product->getName()); ?></h2>
+            <div class="product-item-price">
+                <?php echo $block->escapeHtml($block->getPriceHtml($_product)); ?>
+            </div>
+        </a>
+        <div class="product-item-actions">
+            <form action="<?php echo $block->escapeHtml($block->getAddToCartUrl($_product)); ?>" method="post">
+                <button type="submit" class="action tocart">
+                    <span><?php echo __('Add to Cart'); ?></span>
+                </button>
+            </form>
+        </div>
+    <?php endif; ?>
+</div>
