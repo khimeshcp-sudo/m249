@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/config.xsd">
+    <default>
+        <sprintmind_homepageproductslider>
+            <skus></skus>
+            <max_products>5</max_products>
+            <enable_slider>1</enable_slider>
+        </sprintmind_homepageproductslider>
+    </default>
+</config>

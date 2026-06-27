@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/events.xsd">
+    <type name="SprintMind\HomepageProductSlider\Model\Config">
+        <arguments>
+            <argument name="skuList" xsi:type="string">{{config path="homepage_product_slider/settings/skus"}}</argument>
+            <argument name="maxProducts" xsi:type="number">{{config path="homepage_product_slider/settings/max_products"}}</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Repository">
+        <plugin name="hide_out_of_stock_products" type="SprintMind\HomepageProductSlider\Observer\HideOutOfStockProducts" />
+    </type>
+    <type name="SprintMind\HomepageProductSlider\Block\ProductSlider">
+        <arguments>
+            <argument name="template" xsi:type="string">SprintMind_HomepageProductSlider::slider.phtml</argument>
+        </arguments>
+    </type>
+</config>
