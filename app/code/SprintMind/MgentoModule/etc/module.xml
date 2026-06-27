@@ -1,0 +1,14 @@
+<?php
+
+declare(strict_types=1);
+
+namespace SprintMind\MgentoModule\etc;
+
+use Magento\Framework\Component\Registrar;
+
+class Module
+{
+    const MODULE_NAME = 'SprintMind_MgentoModule';
+}
+
+Registrar::register(Registrar::MODULE, Module::MODULE_NAME, __DIR__ . '/../..');
