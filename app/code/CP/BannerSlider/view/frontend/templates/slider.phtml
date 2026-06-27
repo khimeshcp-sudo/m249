@@ -1,0 +1,11 @@
+<div class="banner-slider">
+    <?php foreach ($block->getProducts() as $product): ?>
+        <div class="product">
+            <a href="<?= $product->getProductUrl() ?>">
+                <img src="<?= $block->getImageUrl($product) ?>" alt="<?= $product->getName() ?>">
+                <h2><?= $product->getName() ?></h2>
+                <p><?= $block->getPriceHtml($product) ?></p>
+            </a>
+        </div>
+    <?php endforeach; ?>
+</div>
