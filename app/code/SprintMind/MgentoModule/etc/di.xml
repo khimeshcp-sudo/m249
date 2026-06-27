@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Model\Product\Attribute\Data\DefaultData">
+        <arguments>
+            <argument name="attributes" xsi:type="array">
+                <item name="mspp_enable" xsi:type="string">mspp_enable</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Attribute\Source\Boolean">
+        <arguments>
+            <argument name="attributeCode" xsi:type="string">mspp_enable</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Attribute\Repository">
+        <arguments>
+            <argument name="attributes" xsi:type="array">
+                <item name="mspp_enable" xsi:type="string">mspp_enable</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Catalog\Model\Product\Attribute\Backend\Boolean">
+        <arguments>
+            <argument name="attributeCode" xsi:type="string">mspp_enable</argument>
+        </arguments>
+    </type>
+</config>
