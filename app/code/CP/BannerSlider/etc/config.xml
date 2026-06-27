@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/config.xsd">
+    <default>
+        <cp_bannerslider>
+            <general>
+                <enabled>1</enabled>
+                <skus></skus>
+                <limit>10</limit>
+                <title>Featured Products</title>
+                <hide_out_of_stock>1</hide_out_of_stock>
+            </general>
+        </cp_bannerslider>
+    </default>
+</config>

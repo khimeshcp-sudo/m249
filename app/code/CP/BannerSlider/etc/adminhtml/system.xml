@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/system.xsd">
+    <sections>
+        <cp_bannerslider translate="label" sortOrder="900" xsi:translate="label">
+            <label>CP Extensions</label>
+            <tab>general</tab>
+            <frontendModel class="Magento\ConfigBlock\System\Config\Form"/>
+            <showInDefault>1</showInDefault>
+            <showInWebsite>1</showInWebsite>
+            <showInStore>1</showInStore>
+            <fields>
+                <enabled>
+                    <label>Enable Module</label>
+                    <frontend_model>Magento\ConfigBlock\Adminhtml\System\Config\Field\Boolean</frontend_model>
+                    <sortOrder>1</sortOrder>
+                    <showInDefault>1</showInDefault>
+                    <showInWebsite>1</showInWebsite>
+                    <showInStore>1</showInStore>
+                </enabled>
+                <skus>
+                    <label>Product SKUs</label>
+                    <frontend_model>Magento\ConfigBlock\Adminhtml\System\Config\Field\Textarea</frontend_model>
+                    <sortOrder>2</sortOrder>
+                    <showInDefault>1</showInDefault>
+                    <showInWebsite>1</showInWebsite>
+                    <showInStore>1</showInStore>
+                </skus>
+                <limit>
+                    <label>Maximum Products</label>
+                    <frontend_model>Magento\ConfigBlock\Adminhtml\System\Config\Field\Number</frontend_model>
+                    <sortOrder>3</sortOrder>
+                    <showInDefault>1</showInDefault>
+                    <showInWebsite>1</showInWebsite>
+                    <showInStore>1</showInStore>
+                </limit>
+                <title>
+                    <label>Slider Title</label>
+                    <frontend_model>Magento\ConfigBlock\Adminhtml\System\Config\Field\Text</frontend_model>
+                    <sortOrder>4</sortOrder>
+                    <showInDefault>1</showInDefault>
+                    <showInWebsite>1</showInWebsite>
+                    <showInStore>1</showInStore>
+                </title>
+                <hide_out_of_stock>
+                    <label>Hide Out of Stock</label>
+                    <frontend_model>Magento\ConfigBlock\Adminhtml\System\Config\Field\Boolean</frontend_model>
+                    <sortOrder>5</sortOrder>
+                    <showInDefault>1</showInDefault>
+                    <showInWebsite>1</showInWebsite>
+                    <showInStore>1</showInStore>
+                </hide_out_of_stock>
+            </fields>
+        </cp_bannerslider>
+    </sections>
+</config>
