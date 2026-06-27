@@ -1,0 +1,38 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+$products = $block->getProducts();
+$maxProducts = $block->getMaxProducts();
+$productsToShow = array_slice($products, 0, $maxProducts);
+?>
+<div class="product-slider">
+    <?php if (count($productsToShow) > 0): ?>
+        <div class="slider">
+            <?php foreach ($productsToShow as $product): ?>
+                <div class="product-item">
+                    <div class="product-image">
+                        <a href="<?= $block->escapeHtml($product->getProductUrl()) ?>">
+                            <img src="<?= $block->escapeHtml($product->getImageUrl()) ?>" alt="<?= $block->escapeHtml($product->getName()) ?>" />
+                        </a>
+                    </div>
+                    <div class="product-name">
+                        <a href="<?= $block->escapeHtml($product->getProductUrl()) ?>">
+                            <?= $block->escapeHtml($product->getName()) ?>
+                        </a>
+                    </div>
+                    <div class="product-price">
+                        <?= $block->escapeHtml($product->getPrice()) ?>
+                    </div>
+                    <div class="add-to-cart">
+                        <button type="button" onclick="setLocation('<?= $block->escapeHtml($product->getAddToCartUrl()) ?>')">
+                            <?= __('Add to Cart') ?>
+                        </button>
+                    </div>
+                </div>
+            <?php endforeach; ?>
+        </div>
+    <?php else: ?>
+        <p><?= __('No products available.') ?></p>
+    <?php endif; ?>
+</div>
