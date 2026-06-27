@@ -1,14 +1,8 @@
-<?php
-
-declare(strict_types=1);
-
-namespace SprintMind\MgentoModule\etc;
-
-use Magento\Framework\Component\Registrar;
-
-class Module
-{
-    const MODULE_NAME = 'SprintMind_MgentoModule';
-}
-
-Registrar::register(Registrar::MODULE, Module::MODULE_NAME, __DIR__ . '/../..');
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="SprintMind_MgentoModule" setup_version="1.0.0">
+        <sequence>
+            <!-- Add any required module dependencies here -->
+        </sequence>
+    </module>
+</config>

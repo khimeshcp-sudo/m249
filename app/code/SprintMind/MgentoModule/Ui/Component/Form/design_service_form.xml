@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Ui/etc/ui_configuration.xsd">
+    <fieldset name="general">
+        <field name="first_name">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">First Name</label>
+                <required>true</required>
+            </settings>
+        </field>
+        <field name="last_name">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Last Name</label>
+                <required>true</required>
+            </settings>
+        </field>
+        <field name="business_name">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Business Name</label>
+            </settings>
+        </field>
+        <field name="email">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Email</label>
+                <validation>
+                    <rule name="email" xsi:type="boolean">true</rule>
+                </validation>
+                <required>true</required>
+            </settings>
+        </field>
+        <field name="phone_number">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Phone Number</label>
+            </settings>
+        </field>
+        <field name="design_type">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Design Type</label>
+                <required>true</required>
+            </settings>
+        </field>
+    </fieldset>
+    <dataSource name="design_service_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="name" xsi:type="string">design_service_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="data" xsi:type="array">
+                    <item name="entity_id" xsi:type="string">0</item>
+                </item>
+            </argument>
+        </argument>
+    </dataSource>
+</form>

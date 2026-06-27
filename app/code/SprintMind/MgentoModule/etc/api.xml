@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Webapi/etc/api.xsd">
+    <api>
+        <resource>
+            <service name="SprintMind\MgentoModule\Api\DesignServiceRepositoryInterface" />
+        </resource>
+        <route>
+            <service name="SprintMind\MgentoModule\Api\DesignServiceRepositoryInterface" />
+            <method name="post" />
+            <path>/V1/designservice</path>
+        </route>
+    </api>
+</config>

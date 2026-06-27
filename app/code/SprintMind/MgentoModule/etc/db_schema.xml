@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<db_schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/etc/db_schema.xsd">
+    <table name="cp_desingservice" resource="default" engine="innodb" comment="Design Service Table">
+        <column name="first_name" xsi:type="varchar" length="255" nullable="false" comment="First Name" />
+        <column name="last_name" xsi:type="varchar" length="255" nullable="false" comment="Last Name" />
+        <column name="business_name" xsi:type="varchar" length="255" nullable="false" comment="Business Name" />
+        <column name="email" xsi:type="varchar" length="255" nullable="false" comment="Email" />
+        <column name="phone_number" xsi:type="varchar" length="50" nullable="false" comment="Phone Number" />
+        <column name="design_type" xsi:type="varchar" length="255" nullable="false" comment="Design Type" />
+        <column name="created_at" xsi:type="timestamp" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At" />
+        <column name="updated_at" xsi:type="timestamp" nullable="false" default="CURRENT_TIMESTAMP" on_update="CURRENT_TIMESTAMP" comment="Updated At" />
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="first_name" />
+            <column name="last_name" />
+        </constraint>
+    </table>
+</db_schema>
