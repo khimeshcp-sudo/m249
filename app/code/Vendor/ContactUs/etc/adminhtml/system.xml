@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/system.xsd">
+    <sections>
+        <contactus translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Contact Us Configuration</label>
+            <tab>general</tab>
+            <frontend_model>Magento\Config\Block\System\Config\Fieldset</frontend_model>
+            <fields>
+                <contact_email>
+                    <label>Email</label>
+                    <frontend_type>text</frontend_type>
+                    <sortOrder>10</sortOrder>
+                    <showInDefault>1</showInDefault>
+                    <showInWebsite>1</showInWebsite>
+                    <showInStore>1</showInStore>
+                </contact_email>
+                <contact_type>
+                    <label>Contact Type</label>
+                    <frontend_type>select</frontend_type>
+                    <sortOrder>20</sortOrder>
+                    <showInDefault>1</showInDefault>
+                    <showInWebsite>1</showInWebsite>
+                    <showInStore>1</showInStore>
+                    <source_model>Vendor\ContactUs\Model\Config\Source\ContactType</source_model>
+                </contact_type>
+            </fields>
+        </contactus>
+    </sections>
+</config>
