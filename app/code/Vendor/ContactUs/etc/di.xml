@@ -1,0 +1,11 @@
+<?php
+
+namespace Vendor\ContactUs\etc;
+
+use Magento\Framework\ObjectManager\DefinitionInterface;
+use Magento\Framework\ObjectManager\ObjectManager;
+
+class Di
+{
+    // Dependency Injection configuration
+}
