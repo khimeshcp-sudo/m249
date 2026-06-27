@@ -1,0 +1,10 @@
+<div class="product-tabs">
+    <?php $tabs = $block->getTabs(); ?>
+    <?php if (!empty($tabs)) : ?>
+        <ul class="tabs">
+            <?php foreach ($tabs as $tab) : ?>
+                <li><?php echo $tab['title']; ?></li>
+            <?php endforeach; ?>
+        </ul>
+    <?php endif; ?>
+</div>
