@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Vendor\Module\Model\CustomerLogin">
+        <arguments>
+            <argument name="customerFactory" xsi:type="object">Magento\Customer\Model\CustomerFactory</argument>
+            <argument name="customerRepository" xsi:type="object">Magento\Customer\Api\CustomerRepositoryInterface</argument>
+            <argument name="customerSession" xsi:type="object">Magento\Customer\Model\Session</argument>
+            <argument name="passwordHash" xsi:type="object">Magento\Customer\Model\Customer\PasswordHash</argument>
+        </arguments>
+    </type>
+</config>
