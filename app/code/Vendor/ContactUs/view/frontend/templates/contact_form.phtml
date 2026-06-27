@@ -1,0 +1,14 @@
+<?php
+/* Contact form template including Contact Type dropdown */
+?>
+<form action="<?= $block->getFormAction() ?>" method="post">
+    <div>
+        <label for="contact_type"><?= __('Contact Type') ?></label>
+        <select name="contact_type" id="contact_type">
+            <?php foreach ($block->getContactTypes() as $type): ?>
+                <option value="<?= $type['value'] ?>"><?= $type['label'] ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+    <!-- Other form fields -->
+</form>
