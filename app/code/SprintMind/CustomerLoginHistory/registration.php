@@ -1,0 +1,7 @@
+<?php
+/**
+ * Auto-generated for: Customer Login History
+ * Create a custom Magento 2 module to maintain customer login history. Create a new database table 'cp_customer_login_log' with columns: entity_id (Primary Key), customer_id, customer_email, login_time, and ip_address. Whenever a customer logs in successfully from the storefront, store a new record in this table using Magento's customer_login event observer. Ensure the implementation follows Magento 2 coding standards.
+ */
+use Magento\Framework\Component\ComponentRegistrar;
+ComponentRegistrar::register(ComponentRegistrar::MODULE, 'SprintMind_CustomerLoginHistory', __DIR__);
