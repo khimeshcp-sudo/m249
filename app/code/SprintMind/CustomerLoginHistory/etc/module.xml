@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- Backend tasks:
+ * Create a custom Magento 2 module to maintain customer login history. Create a new database table 'cp_customer_login_log' with columns: entity_id (Primary Key), customer_id, customer_email, login_time, and ip_address. Whenever a customer logs in successfully from the storefront, store a new record in this table using Magento's customer_login event observer. Ensure the implementation follows Magento 2 coding standards.
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="SprintMind_CustomerLoginHistory"/>
+</config>
