@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/config.xsd">
+    <default>
+        <homepage_product_slider>
+            <skus></skus>
+            <max_products>10</max_products>
+            <hide_out_of_stock>1</hide_out_of_stock>
+        </homepage_product_slider>
+    </default>
+</config>

@@ -1,0 +1,39 @@
+.slider {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-item {
+    flex: 0 0 auto;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.slider img {
+    max-width: 100%;
+    height: auto;
+}
+
+.slider .product-name {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.slider .product-price {
+    font-size: 1.1em;
+    color: #b12704;
+}
+
+.slider .add-to-cart {
+    background-color: #007cba;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+}
+
+.slider .add-to-cart:hover {
+    background-color: #005ea6;
+}
