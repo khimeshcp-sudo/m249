@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Webapi/etc/webapi.xsd">
+    <service name="V1/products" class="Magento\Catalog\Api\ProductRepositoryInterface">
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+        <data>
+            <attribute name="mspp_enable" />
+        </data>
+    </service>
+</config>
