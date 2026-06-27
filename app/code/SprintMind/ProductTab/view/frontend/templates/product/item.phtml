@@ -1,0 +1,15 @@
+<div class="product-item">
+    <a href="<?php echo $block->escapeHtml($product->getProductUrl()); ?>" class="product-item-link">
+        <img src="<?php echo $block->escapeHtml($block->getImageUrl($product)); ?>" alt="<?php echo $block->escapeHtml($product->getName()); ?>" class="product-image" />
+        <h2 class="product-name"><?php echo $block->escapeHtml($product->getName()); ?></h2>
+        <div class="product-price">
+            <?php echo $block->escapeHtml($block->getPriceHtml($product)); ?>
+        </div>
+    </a>
+    <form action="<?php echo $block->escapeHtml($block->getAddToCartUrl($product)); ?>" method="post">
+        <input type="hidden" name="product" value="<?php echo $block->escapeHtml($product->getId()); ?>" />
+        <button type="submit" class="action tocart">
+            <span><?php echo __('Add to Cart'); ?></span>
+        </button>
+    </form>
+</div>
