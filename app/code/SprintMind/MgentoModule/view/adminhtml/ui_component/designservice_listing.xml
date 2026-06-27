@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Ui:etc/ui_configuration.xsd">
+    <dataSource name="designservice_listing_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="name" xsi:type="string">designservice_listing_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
+            <argument name="data" xsi:type="array">
+                <item name="collectionClass" xsi:type="string">SprintMind\MgentoModule\Model\ResourceModel\DesignService\Collection</item>
+            </argument>
+        </argument>
+    </dataSource>
+    <columns name="designservice_columns">
+        <column name="entity_id">
+            <settings>
+                <label translate="true">ID</label>
+                <sortable>true</sortable>
+                <filter>text</filter>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="first_name">
+            <settings>
+                <label translate="true">First Name</label>
+                <sortable>true</sortable>
+                <filter>text</filter>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="last_name">
+            <settings>
+                <label translate="true">Last Name</label>
+                <sortable>true</sortable>
+                <filter>text</filter>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="business_name">
+            <settings>
+                <label translate="true">Business Name</label>
+                <sortable>true</sortable>
+                <filter>text</filter>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="email">
+            <settings>
+                <label translate="true">Email</label>
+                <sortable>true</sortable>
+                <filter>text</filter>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="phone_number">
+            <settings>
+                <label translate="true">Phone Number</label>
+                <sortable>true</sortable>
+                <filter>text</filter>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="design_type">
+            <settings>
+                <label translate="true">Design Type</label>
+                <sortable>true</sortable>
+                <filter>text</filter>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="created_at">
+            <settings>
+                <label translate="true">Created At</label>
+                <sortable>true</sortable>
+                <filter>dateRange</filter>
+                <visible>true</visible>
+            </settings>
+        </column>
+        <column name="updated_at">
+            <settings>
+                <label translate="true">Updated At</label>
+                <sortable>true</sortable>
+                <filter>dateRange</filter>
+                <visible>true</visible>
+            </settings>
+        </column>
+    </columns>
+    <actionsColumn name="actions">
+        <settings>
+            <label translate="true">Actions</label>
+            <filter>text</filter>
+            <sortable>false</sortable>
+            <visible>true</visible>
+        </settings>
+    </actionsColumn>
+</listing>
